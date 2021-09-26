@@ -14,7 +14,7 @@ class KeplerConfig(PretrainedConfig):
 
     def __init__(
         self,
-        embedding_size,
+        embedding_size=768,
         nrelation=1000,
         gamma=4,
         ke_model='TransE',
