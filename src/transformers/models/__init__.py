@@ -55,6 +55,7 @@ from . import (
     herbert,
     hubert,
     ibert,
+    kepler,
     layoutlm,
     layoutlmv2,
     led,

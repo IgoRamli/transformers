@@ -219,6 +219,7 @@ _import_structure = {
     "models.herbert": ["HerbertTokenizer"],
     "models.hubert": ["HUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "HubertConfig"],
     "models.ibert": ["IBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "IBertConfig"],
+    "models.kepler": ["KEPLER_PRETRAINED_CONFIG_ARCHIVE_MAP", "KeplerConfig"],
     "models.layoutlm": ["LAYOUTLM_PRETRAINED_CONFIG_ARCHIVE_MAP", "LayoutLMConfig", "LayoutLMTokenizer"],
     "models.layoutlmv2": [
         "LAYOUTLMV2_PRETRAINED_CONFIG_ARCHIVE_MAP",
@@ -887,6 +888,12 @@ if is_torch_available():
             "IBertForTokenClassification",
             "IBertModel",
             "IBertPreTrainedModel",
+        ]
+    )
+    _import_structure["models.kepler"].extend(
+        [
+            "KEPLER_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "KeplerModel",
         ]
     )
     _import_structure["models.layoutlm"].extend(
