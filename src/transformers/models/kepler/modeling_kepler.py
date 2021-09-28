@@ -82,8 +82,6 @@ class KeplerLMHead(PreTrainedModel):
         self.vocab_layer_norm = nn.LayerNorm(config.embedding_size, eps=1e-12)
         self.vocab_projector = nn.Linear(config.embedding_size, config.vocab_size)
 
-        self.init_weights()
-
         self.mlm_loss_fct = nn.CrossEntropyLoss()
 
     def get_position_embeddings(self) -> nn.Embedding:
