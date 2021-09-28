@@ -78,9 +78,9 @@ class KeplerLMHead(PreTrainedModel):
         super().__init__(config)
 
         self.encoder = encoder
-        self.vocab_transform = nn.Linear(config.dim, config.dim)
-        self.vocab_layer_norm = nn.LayerNorm(config.dim, eps=1e-12)
-        self.vocab_projector = nn.Linear(config.dim, config.vocab_size)
+        self.vocab_transform = nn.Linear(config.embedding_size, config.embedding_size)
+        self.vocab_layer_norm = nn.LayerNorm(config.embedding_size, eps=1e-12)
+        self.vocab_projector = nn.Linear(config.embedding_size, config.vocab_size)
 
         self.init_weights()
 
